@@ -1,4 +1,3 @@
-
 // Utility Functions
 
 /**
@@ -7,7 +6,7 @@
  * @returns {string} - The formatted string.
  */
 function capitalizeWords(input) {
-    return input.replace(/\b\w/g, char => char.toUpperCase());
+    return input.replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
 /**
@@ -16,18 +15,17 @@ function capitalizeWords(input) {
  * @returns {Array} - An array of active user objects.
  */
 function filterActiveUsers(users) {
-    return users.filter(user => user.isActive);
+    return users.filter((user) => user.isActive);
 }
 
 /**
  * Logs an action performed by a user with a timestamp.
  * @param {string} action - The action performed.
  * @param {string} username - The name of the user.
- * @returns {string} - The log message.
  */
 function logAction(action, username) {
     const timestamp = new Date().toISOString();
-    return `User ${username} performed ${action} at ${timestamp}`;
+    console.log(`User ${username} performed ${action} at ${timestamp}`);
 }
 
 module.exports = { capitalizeWords, filterActiveUsers, logAction };
